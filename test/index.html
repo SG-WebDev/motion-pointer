@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../dist/index.css">
     <title>Motion Pointer Test</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #333333;
+            font-family: Arial, monospace;
+        }
+        .container {
+            width: 75vw;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+        }
+        .tile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d0a264;
+            height: 25vh;
+            width: 25vh;
+            margin: auto;
+            text-decoration: none;
+        }
+        .tile__Text {
+            font-size: 2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <a href="#" class="tile">
+        <span class="tile__Text">Hover!</span>
+    </a>
+    <a onclick="return false;" class="tile">
+        <span class="tile__Text">Hover!</span>
+    </a>
+</div>
 <script src="../dist/index.js"></script>
 </body>
 </html>
