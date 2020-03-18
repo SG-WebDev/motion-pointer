@@ -21,9 +21,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #d0a264;
-            height: 25vh;
-            width: 25vh;
+            background-color: #446cb3;
+            height: 20vh;
+            width: 20vh;
             margin: auto;
             text-decoration: none;
         }
@@ -40,11 +40,31 @@
     <a href="#" class="tile">
         <span class="tile__Text">Hover!</span>
     </a>
-    <a onclick="return false;" class="tile">
+    <a class="tile">
         <span class="tile__Text">Hover!</span>
     </a>
+    <div onclick="return false;" class="tile">
+        <span class="tile__Text">Hover!</span>
+    </div>
+    <div id="hoverTest" class="tile">
+        <span class="tile__Text">Hover!</span>
+    </div>
 </div>
-<div class="motionPointer"></div>
-<script src="../dist/index.js"></script>
 </body>
+<script src="../dist/index.js"></script>
+<script>
+    /* Typo rule of adding elements
+    * class: ".className"
+    * id: "#idName"
+    * tag: "tagName"
+    * elementWithSpecificAttribute: "[attributeName]"
+    * */
+    const hoverElements = [
+        "a",
+        "[href]",
+        "[onclick]",
+        "#hoverTest",
+    ];
+    motionPointerInit(hoverElements);
+</script>
 </html>

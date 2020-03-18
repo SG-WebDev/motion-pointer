@@ -5,9 +5,15 @@
   border: 1px solid $color;
   border-radius: 50%;
   position: fixed;
-  top: 0;
-  left: 0;
-  will-change: transform;
+  top: -10px;
+  left: -14px;
+  will-change: transform, width, height, background-color;
+  transition: height 0.2s linear, width 0.2s linear, background-color 0.2s linear;
   pointer-events: none;
   z-index: 99;
+  &--hover {
+    width: $hoverSize;
+    height: $hoverSize;
+    background-color: #{$color}#{$hoverTransparency};
+  }
 }
