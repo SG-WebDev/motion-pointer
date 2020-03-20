@@ -2,18 +2,19 @@
   width: $size;
   height: $size;
   background-color: #{$color}#{$transparency};
-  border: 1px solid $color;
   border-radius: 50%;
   position: fixed;
-  top: -10px;
-  left: -14px;
+  top: $cursorYAxis;
+  left: $cursorXAxis;
   will-change: transform, width, height, background-color;
-  transition: height 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+  transition: all 0.2s ease-out;
   pointer-events: none;
   z-index: 99;
   &--hover {
     width: $hoverSize;
     height: $hoverSize;
     background-color: #{$color}#{$hoverTransparency};
+    top: $cursorHoverXAxis;
+    left: $cursorHoverYAxis;
   }
 }
