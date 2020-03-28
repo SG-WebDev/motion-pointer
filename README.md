@@ -2,7 +2,7 @@
 
 Small custom mouse cursor CSS &amp; JS library for fancy UX.
 
-![](gif.gif)
+![](./test/motion-pointer.gif)
 
 ## How to import
 
