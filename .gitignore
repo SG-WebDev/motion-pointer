@@ -1,2 +1,5 @@
 # Project exclude paths
 /node_modules/
+/dist/index.js
+/dist/index.css
+/dist/index.css.map
