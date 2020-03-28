@@ -1,6 +1,6 @@
 # motion-pointer
 
-Custom mouse cursor CSS &amp; JS library for fancy UX.
+Small custom mouse cursor CSS &amp; JS library for fancy UX.
 
 ## How to import
 
