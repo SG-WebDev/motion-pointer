@@ -10,39 +10,40 @@ function motionPointerInit(arr) {
     document.querySelector('body').appendChild(newCursor);
     const cursorElement = document.querySelector('.motionPointer');
 
-    // get DOM hover elements
-    let domItems = [];
-    arr.forEach( arrEl => {
-        let domItem= document.querySelectorAll(arrEl);
-        domItems.push(domItem);
-        return domItems;
-    });
-
-    // add mouse events to hover elements
-    domItems.forEach( nodeItems => {
-        nodeItems.forEach(nodeItem => {
-            nodeItem.addEventListener('mouseenter', function () {
-                cursorElement.classList.add(hoverCursorClass);
-                cursorElement.animate({
-                        transform: ['scale(1)', 'scale(2)']},
-                    {
-                        duration: 200,
-                        fill: "forwards",
-                        //composite: "add"
-                    });
-            });
-            nodeItem.addEventListener('mouseleave', function () {
-                cursorElement.classList.remove(hoverCursorClass);
-                cursorElement.animate({
-                    transform: ['scale(2)', 'scale(1)']},
-                {
-                    duration: 200,
-                    fill: "forwards",
-                    //composite: "add"
+    if(arr) {
+        // get DOM hover elements
+        let domItems = [];
+        arr.forEach( arrEl => {
+            let domItem= document.querySelectorAll(arrEl);
+            domItems.push(domItem);
+            return domItems;
+        });
+        // add mouse events to hover elements
+        domItems.forEach( nodeItems => {
+            nodeItems.forEach(nodeItem => {
+                nodeItem.addEventListener('mouseenter', function () {
+                    cursorElement.classList.add(hoverCursorClass);
+                    cursorElement.animate({
+                            transform: ['scale(1)', 'scale(2)']},
+                        {
+                            duration: 200,
+                            fill: "forwards",
+                            //composite: "add" //browser doesn't support :/
+                        });
+                });
+                nodeItem.addEventListener('mouseleave', function () {
+                    cursorElement.classList.remove(hoverCursorClass);
+                    cursorElement.animate({
+                            transform: ['scale(2)', 'scale(1)']},
+                        {
+                            duration: 200,
+                            fill: "forwards",
+                            //composite: "add" //browser doesn't support :/
+                        });
                 });
             });
         });
-    });
+    }
 
     // change mouse position function
     function handler(e) {
