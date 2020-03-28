@@ -10,7 +10,7 @@
     "watch": "watch \"npm run dev\" ./src"
   },
   "author": "SG-WebDev",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "minify": "^5.1.0",
     "node-sass": "^4.13.1",
