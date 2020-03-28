@@ -23,9 +23,23 @@ function motionPointerInit(arr) {
         nodeItems.forEach(nodeItem => {
             nodeItem.addEventListener('mouseenter', function () {
                 cursorElement.classList.add(hoverCursorClass);
+                cursorElement.animate({
+                        transform: ['scale(1)', 'scale(2)']},
+                    {
+                        duration: 200,
+                        fill: "forwards",
+                        //composite: "add"
+                    });
             });
             nodeItem.addEventListener('mouseleave', function () {
                 cursorElement.classList.remove(hoverCursorClass);
+                cursorElement.animate({
+                    transform: ['scale(2)', 'scale(1)']},
+                {
+                    duration: 200,
+                    fill: "forwards",
+                    //composite: "add"
+                });
             });
         });
     });
@@ -34,7 +48,11 @@ function motionPointerInit(arr) {
     function handler(e) {
         let pageX = e.pageX;
         let pageY = e.pageY;
-        cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;
+        let cursorElementWidth = cursorElement.offsetWidth;
+        let cursorElementHeight = cursorElement.offsetHeight;
+        //cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;
+        cursorElement.style.left = `${pageX - ((cursorElementWidth - 10) / 2)}px`;
+        cursorElement.style.top = `${pageY - ((cursorElementHeight - 10) / 2)}px`;
     }
     document.addEventListener('mousemove', handler);
 }

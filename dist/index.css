@@ -1,3 +1,3 @@
-*{cursor:url("../assets/dot.svg"),none !important}.motionPointer{width:30px;height:30px;background-color:#d0a26470;border-radius:50%;position:fixed;top:-10px;left:-10px;will-change:transform, width, height, background-color;transition:all 0.2s ease-out;pointer-events:none;z-index:99}.motionPointer--hover{width:60px;height:60px;background-color:#d0a26430;top:-25px;left:-25px}
+*{cursor:url("../assets/dot.svg"),none !important}.motionPointer{width:30px;height:30px;background-color:#d0a26470;border-radius:50%;position:fixed;will-change:transform, width, height, background-color;transition:all 0.2s ease-out;pointer-events:none;z-index:99}.motionPointer--hover{background-color:#d0a26430}
 
 /*# sourceMappingURL=index.css.map */

@@ -4,17 +4,11 @@
   background-color: #{$color}#{$transparency};
   border-radius: 50%;
   position: fixed;
-  top: $cursorYAxis;
-  left: $cursorXAxis;
   will-change: transform, width, height, background-color;
   transition: all 0.2s ease-out;
   pointer-events: none;
   z-index: 99;
   &--hover {
-    width: $hoverSize;
-    height: $hoverSize;
     background-color: #{$color}#{$hoverTransparency};
-    top: $cursorHoverXAxis;
-    left: $cursorHoverYAxis;
   }
 }
