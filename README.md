@@ -2,6 +2,8 @@
 
 Small custom mouse cursor CSS &amp; JS library for fancy UX.
 
+![](gif.gif)
+
 ## How to import
 
 If you use tools which can load your CSS & JS from node_modules e.g (webpack) you can import output `dist` file like that:
