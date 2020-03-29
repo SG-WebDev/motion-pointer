@@ -12,9 +12,6 @@
     "cursor"
   ],
   "main": "dist/index.js",
-  "files": [
-    "dist/*"
-  ],
   "scripts": {
     "dev:scss": "node-sass ./src/scss/index.scss --source-map true -o -r ./dist/index.css --output-style compressed",
     "dev:js": "minify ./src/js/cursor.js > ./dist/index.js",
