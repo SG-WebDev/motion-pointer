@@ -52,8 +52,8 @@ function motionPointerInit(arr) {
         let cursorElementWidth = cursorElement.offsetWidth;
         let cursorElementHeight = cursorElement.offsetHeight;
         //cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;
-        cursorElement.style.left = `${pageX - ((cursorElementWidth - 10) / 2)}px`;
-        cursorElement.style.top = `${pageY - ((cursorElementHeight - 10) / 2)}px`;
+        cursorElement.style.left = `${pageX - ((cursorElementWidth - 6) / 2)}px`;
+        cursorElement.style.top = `${pageY - ((cursorElementHeight - 6) / 2)}px`;
     }
     document.addEventListener('mousemove', handler);
 }
