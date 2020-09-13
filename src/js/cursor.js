@@ -47,8 +47,8 @@ function motionPointerInit(arr) {
 
     // change mouse position function
     function handler(e) {
-        let pageX = e.pageX;
-        let pageY = e.pageY;
+        let pageX = e.clientX;
+        let pageY = e.clientY;
         let cursorElementWidth = cursorElement.offsetWidth;
         let cursorElementHeight = cursorElement.offsetHeight;
         //cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;

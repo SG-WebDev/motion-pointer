@@ -3,7 +3,7 @@
   height: $size;
   background-color: #{$color}#{$transparency};
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   will-change: transform, width, height, background-color;
   transition: all 0.2s ease-out;
   pointer-events: none;
