@@ -10,6 +10,12 @@ function motionPointerInit(arr) {
     document.querySelector('body').appendChild(newCursor);
     const cursorElement = document.querySelector('.motionPointer');
 
+    // set position style
+    let cursorElementWidth = cursorElement.offsetWidth;
+    let cursorElementHeight = cursorElement.offsetHeight;
+    cursorElement.style.left = `${-((cursorElementWidth - 6) / 2)}px`;
+    cursorElement.style.top = `${-((cursorElementHeight - 6) / 2)}px`;
+
     if(arr) {
         // get DOM hover elements
         let domItems = [];
@@ -23,22 +29,30 @@ function motionPointerInit(arr) {
             nodeItems.forEach(nodeItem => {
                 nodeItem.addEventListener('mouseenter', function () {
                     cursorElement.classList.add(hoverCursorClass);
-                    cursorElement.animate({
-                            transform: ['scale(1)', 'scale(2)']},
+                    cursorElement.animate(
+                        {
+                            width: [`${cursorElementWidth}px`, `${cursorElementWidth * 2}px`],
+                            height: [`${cursorElementHeight}px`, `${cursorElementHeight * 2}px`],
+                            left: [`${-((cursorElementWidth - 6) / 2)}px`, `${-(((cursorElementWidth * 2) - 6) / 2)}px`],
+                            top: [`${-((cursorElementHeight - 6) / 2)}px`, `${-(((cursorElementHeight * 2) - 6) / 2)}px`],
+                        },
                         {
                             duration: 200,
-                            fill: "forwards",
-                            //composite: "add" //browser doesn't support :/
+                            fill: "forwards"
                         });
                 });
                 nodeItem.addEventListener('mouseleave', function () {
                     cursorElement.classList.remove(hoverCursorClass);
-                    cursorElement.animate({
-                            transform: ['scale(2)', 'scale(1)']},
+                    cursorElement.animate(
+                        {
+                            width: [`${cursorElementWidth * 2}px`, `${cursorElementWidth}px`],
+                            height: [`${cursorElementHeight * 2}px`, `${cursorElementHeight}px`],
+                            left: [`${-(((cursorElementWidth * 2) - 6) / 2)}px`, `${-((cursorElementWidth - 6) / 2)}px`],
+                            top: [`${-(((cursorElementHeight * 2) - 6) / 2)}px`, `${-((cursorElementHeight - 6) / 2)}px`],
+                        },
                         {
                             duration: 200,
-                            fill: "forwards",
-                            //composite: "add" //browser doesn't support :/
+                            fill: "forwards"
                         });
                 });
             });
@@ -49,11 +63,7 @@ function motionPointerInit(arr) {
     function handler(e) {
         let pageX = e.clientX;
         let pageY = e.clientY;
-        let cursorElementWidth = cursorElement.offsetWidth;
-        let cursorElementHeight = cursorElement.offsetHeight;
-        //cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;
-        cursorElement.style.left = `${pageX - ((cursorElementWidth - 6) / 2)}px`;
-        cursorElement.style.top = `${pageY - ((cursorElementHeight - 6) / 2)}px`;
+        cursorElement.style.transform = `translate(${pageX}px, ${pageY}px)`;
     }
     document.addEventListener('mousemove', handler);
 }
