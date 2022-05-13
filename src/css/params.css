@@ -1,7 +1,7 @@
 /* Cursor config */
 :root {
-    --pointerColor: #d0a26460; /* [hex][0-99] */
-    --pointerHoverColor: #d0a26430; /* [hex][0-99] */
+    --pointerColor: #d0a26460; /* [hex][00-FF] */
+    --pointerHoverColor: #d0a26430; /* [hex][00-FF] */
     --pointerSize: 40px; /* px */
 }
 

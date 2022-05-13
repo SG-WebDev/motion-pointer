@@ -1,6 +1,6 @@
 # motion-pointer
 
-Small custom mouse cursor CSS &amp; JS library for fancy UX.
+Small custom mouse cursor CSS &amp; JS library for fancy UI feature.
 
 ![](./test/motion-pointer.gif)
 
@@ -20,20 +20,14 @@ Else you can add `dist` files form package directly to your project and link it 
 ```
 ## How to modify
 
-If you want to change params of cursor or improve functionality then you can to that by change files in `src` and compile then by run npm scripts like:
+If you want to change params of cursor or improve functionality then you can to that by overriding CSS custom properties files in your project codebase.
 
-```bash
-npm run dev
-npm run watch
-```
-Appearance params files is in `/src/scss/_params.scss`
-Params you can set there:
+Params you can set:
 
-```scss
-$color: #d0a264; // outline cursor color in hex
-$size: 30px; // height and width outline cursor in px
-$transparency: 70; // value of init transparency, scope 0-99
-$hoverTransparency: 30; //value of hover transparency, scope 0-99
+```css
+--pointerColor: #d0a26460; /* cursor color in hex & value of init transparency, scope 00-FF */
+--pointerHoverColor: #d0a26430;  /* cursor color in hex & value of hover transparency, scope 00-FF */
+--pointerSize: 40px; /* height and width outline cursor in px */
 ```
 
 ## How to use
