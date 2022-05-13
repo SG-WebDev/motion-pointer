@@ -28,6 +28,7 @@ Params you can set:
 --pointerColor: #d0a26460; /* cursor color in hex & value of init transparency, scope 00-FF */
 --pointerHoverColor: #d0a26430;  /* cursor color in hex & value of hover transparency, scope 00-FF */
 --pointerSize: 40px; /* height and width outline cursor in px */
+--pointerNativeURL: url("url_to_image"); /* image asset for native cursor dot */
 ```
 
 ## How to use

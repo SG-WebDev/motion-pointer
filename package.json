@@ -15,8 +15,7 @@
   "scripts": {
     "dev:scss": "minify ./src/css/params.css ./src/css/reset.css ./src/css/cursor.css > ./dist/index.css ",
     "dev:js": "minify ./src/js/cursor.js > ./dist/index.js",
-    "dev": "npm-run-all -p dev:*",
-    "watch": "watch \"npm run dev\" ./src"
+    "dev": "npm-run-all -p dev:*"
   },
   "repository": "https://github.com/SG-WebDev/motion-pointer",
   "author": "SG-WebDev",
