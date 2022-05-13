@@ -1,0 +1,15 @@
+.motionPointer {
+  width: var(--pointerSize);
+  height: var(--pointerSize);
+  background-color: var(--pointerColor);
+  border-radius: 50%;
+  position: fixed;
+  will-change: transform;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.motionPointer--hover {
+   background-color: var(--pointerHoverColor);
+ }

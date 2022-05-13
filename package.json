@@ -13,7 +13,7 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "dev:scss": "node-sass ./src/scss/index.scss --source-map true -o -r ./dist/index.css --output-style compressed",
+    "dev:scss": "minify ./src/css/params.css ./src/css/reset.css ./src/css/cursor.css > ./dist/index.css ",
     "dev:js": "minify ./src/js/cursor.js > ./dist/index.js",
     "dev": "npm-run-all -p dev:*",
     "watch": "watch \"npm run dev\" ./src"
@@ -22,9 +22,8 @@
   "author": "SG-WebDev",
   "license": "MIT",
   "devDependencies": {
-    "minify": "^5.1.1",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
+    "minify": "^8.0.4",
+    "npm-run-all": "4.1.5",
     "watch": "^1.0.2"
   }
 }
