@@ -20,7 +20,7 @@ Else you can add `dist` files form package directly to your project and link it 
 ```
 ## How to modify
 
-If you want to change params of cursor or improve functionality then you can to that by overriding CSS custom properties files in your project codebase.
+If you want to change params of cursor or improve functionality then you can to that by overriding CSS custom properties in your project codebase.
 
 Params you can set:
 
