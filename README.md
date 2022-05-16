@@ -25,15 +25,15 @@ If you want to change params of cursor or improve functionality then you can to 
 Params you can set:
 
 ```css
---pointerColor: #d0a26460; /* cursor color in hex & value of init transparency, scope 00-FF */
---pointerHoverColor: #d0a26430;  /* cursor color in hex & value of hover transparency, scope 00-FF */
---pointerSize: 40px; /* height and width outline cursor in px */
+--pointerColor: #d0a26460; /* cursor color in rgba/hex & value of init transparency, scope 00-FF */
+--pointerHoverColor: #d0a26430;  /* cursor color in rgba/hex & value of hover transparency, scope 00-FF */
+--pointerSize: 40px; /* height and width value of cursor in px */
 --pointerNativeURL: url("url_to_image"); /* image asset for native cursor dot */
 ```
 
 ## How to use
 
-If you want to initialize hovering on some elements on your site (its optional) you can create array of this elements and pass it as parameter of init function:
+If you want to initialize hovering on some elements on your site (it's optional) you can create array of this elements and pass it as parameter of init function:
 ```html
 <script>
     /* Typo rule of adding elements
