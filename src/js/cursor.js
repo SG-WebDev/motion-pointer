@@ -7,8 +7,6 @@ function isMobileRes() {
 }
 
 function motionPointerInit(arr) {
-  console.debug(isTouch(), "isTouch")
-  console.debug(isMobileRes(), "isMobileRes")
   if (!isTouch() && !isMobileRes()) {
     // HTML cursor classes
     const baseCursorClass = 'motionPointer';
